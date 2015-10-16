@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Animation in JQuery</title>
+<script src="../../lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$("document").ready(function(){
+	$("#btn1").click(function(){
+		$("#first").animate({width:2,height:2,left:800,top:0},500);
+
+		});
+});
+</script>
+<style type="text/css">
+#first{
+position:relative;
+	top:400px;
+	width:100px;
+	height:100px;
+	margin:10px;
+	border-radius: 100px;
+	padding:20px;
+	background:green;
+	border:2px solid yellow;
+	font-size: 16pt;
+	cursor:pointer
+	}
+#second{
+position:relative;
+	top:400px;
+	width:100px;
+	height:100px;
+	margin:10px;
+	border-radius: 100px;
+	padding:20px;
+	background:green;
+	border:2px solid yellow;
+	font-size: 16pt;
+	cursor:pointer
+	}
+</style>
+</head>
+<body>
+<input type="button" value="Click me to animate" id="btn1"/>
+<div id="first"></div>
+</body>
+</html>

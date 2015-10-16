@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Event handling with JQuery</title>
+<script src="../../lib/jquery-1.11.3.min.js"></script>
+<script >
+$("document").ready(function(){
+	$("#newid").on("mousemove",onMouseMove);
+	$("#newid").on("click",onClick);
+	$("#newid").on("mouseleave",onMouseLeave);
+
+	function onMouseMove(evt){
+		$("#newid").text(evt.type+" : "+evt.pageX+" , "+evt.pageY);
+		if(evt.pageX==50 && evt.pageY==50){
+			alert("50:50");
+			}
+		}
+	
+	function onClick(evt){
+		$("#newid").text("abc");
+		$("#newid").off("mousemove",onMouseMove);
+		}
+	
+	function onMouseLeave(evt){
+		$("#newid").text(evt.type);
+		}
+});
+</script>
+</head>
+<body>
+<div id="newid" style="height:200px;width:300px;border:3px solid green;"></div>
+</body>
+</html>

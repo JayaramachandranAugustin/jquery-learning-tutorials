@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Create and Change Page content</title>
+<script src="../../lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$("document").ready(function(){
+var paraTag=$("<p>");
+paraTag.append("<em>The page content can be created and modified using jquery </em>");
+/*To replace the Content inside the particular selector use .html
+ * The below code will replace the content present inside the id content
+ */
+$("#content").html(paraTag);
+// .prepend is used to append the given string with the particular id
+$("#createContent").prepend("JQuery : ");
+
+$("#content").html("<h1>Hello World</h1>");
+//.text will escape the html tags
+$("#content").text("<p>This para will appear with tags</p>");
+});
+</script>
+</head>
+<body>
+<h3 id="createContent">Create and Change page content</h3><br/>
+<div id="content">
+<p> This will be overridden</p>
+</div>
+</body>
+</html>

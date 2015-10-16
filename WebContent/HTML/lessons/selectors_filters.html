@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Selectors and filters</title>
+<script type="text/javascript" src="../../lib/jquery-1.11.3.min.js"></script>
+<script>
+$("document").ready(function(){
+	//$("*").css("border","3px solid red");
+	//$("p").css("border","3px solid red");
+	//$("h1").css("text-align","center");
+	//$("#uses_trig").css("text-align","center");
+	//$("h3:not(.modern)").css("border","3px solid green");
+	$("h3.modern").css("border","3px solid green");
+	//$("p:first").css("border","3px solid green");
+	
+});
+</script>
+</head>
+<body>
+<h1 id="uses_trig">Uses of Trignometry</h1>
+<h3 class="modern">Some modern uses</h3>
+<div>
+<p>Scientific fields that make use of trigonometry include:</p>
+<p>acoustics, architecture, astronomy, cartography, civil engineering, geophysics, crystallography, electrical engineering, electronics, land surveying and geodesy, many physical sciences, mechanical engineering, machining, medical imaging , number theory, oceanography, optics, pharmacology, probability theory, seismology, statistics, and visual perception</p>
+<p>That these fields involve trigonometry does not mean knowledge of trigonometry is needed in order to learn anything about them. It does mean that some things in these fields cannot be understood without trigonometry. For example, a professor of music may perhaps know nothing of mathematics, but would probably know that Pythagoras was the earliest known contributor to the mathematical theory of music.</p>
+<p>In some of the fields of endeavor listed above it is easy to imagine how trigonometry could be used. For example, in navigation and land surveying, the occasions for the use of trigonometry are in at least some cases simple enough that they can be described in a beginning trigonometry textbook. In the case of music theory, the application of trigonometry is related to work begun by Pythagoras, who observed that the sounds made by plucking two strings of different lengths are consonant if both lengths are small integer multiples of a common length. The resemblance between the shape of a vibrating string and the graph of the sine function is no mere coincidence. In oceanography, the resemblance between the shapes of some waves and the graph of the sine function is also not coincidental. In some other fields, among them climatology, biology, and economics, there are seasonal periodicities. The study of these often involves the periodic nature of the sine and cosine function.</p>
+</div>
+<div>
+<h3 class="fourier_transform">Fourier transforms</h3>
+<p>A more abstract concept than Fourier series is the idea of Fourier transform. Fourier transforms involve integrals rather than sums, and are used in a similarly diverse array of scientific fields. Many natural laws are expressed by relating rates of change of quantities to the quantities themselves. For example: The rate of change of population is sometimes jointly proportional to the present population and the amount by which the present population falls short of the carrying capacity. This kind of relationship is called a differential equation. If, given this information, one tries to express population as a function of time, one is trying to "solve" the differential equation. Fourier transforms may be used to convert some differential equations to algebraic equations for which methods of solving them are known. Fourier transforms have many uses. In almost any scientific context in which the words spectrum, harmonic, or resonance are encountered, Fourier transforms or Fourier series are nearby.</p>
+</div>
+
+<div>
+<h3 class="statistics" >Statistics, including mathematical psychology</h3>
+<p>Intelligence quotients are sometimes held to be distributed according to the bell-shaped curve. About 40% of the area under the curve is in the interval from 100 to 120; correspondingly, about 40% of the population scores between 100 and 120 on IQ tests. Nearly 9% of the area under the curve is in the interval from 120 to 140; correspondingly, about 9% of the population scores between 120 and 140 on IQ tests, etc. Similarly many other things are distributed according to the "bell-shaped curve", including measurement errors in many physical measurements. Why the ubiquity of the "bell-shaped curve"? There is a theoretical reason for this, and it involves Fourier transforms and hence trigonometric functions. That is one of a variety of applications of Fourier transforms to statistics.</p>
+</div>
+</body>
+</html>
