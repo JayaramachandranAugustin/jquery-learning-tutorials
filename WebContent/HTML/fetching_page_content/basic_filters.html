@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Basic Filters</title>
+<script type="text/javascript" src="../../lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$("document").ready(function(){
+	//Filtering first and last element
+	//filters the first paragraph element in the webpage
+	$("p:first").css("border","2px solid red");
+	//filters the last paragraph element in the webpage
+	$("p:last").css("border","2px solid red");
+
+	//Filtering first and last element for a particular id
+	//filters the first element in the div with australia id
+	$("#australia a:first").css("border","2px solid green");
+	//filters the last element in the div with australia id
+	$("#australia a:last").css("border","2px solid green");
+
+	//Filtering the even and odd elements from list of tags
+	//Filters the list of element whose indexes are odd from the id india 
+	$("#india a:odd").css("color","blue");
+	//Filters the list of element whose indexes are even from the id india 
+	$("#india a:even").css("color","green");
+	
+})
+</script>
+<style type="text/css">
+.intro{
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<h2 class="intro">Cricket World cup Final 2003</h2>
+<p>Having won won 15 out of their 18 ODIs prior to the start of the tournament, defending champions Australia were called the "favourites" to win the title.Apart from the 1999 tournament, they had also won the title in 1987. India had won the competition once, in 1983. Prior to the World Cup, India lost an ODI series against West Indies at home, and were defeated heavily in a tour of New Zealand. Australia had won all the matches in tournament up until this point; India had won all their matches except the defeat to Australia in the group phase</p>
+<p>Prior to this game, the two teams had faced each other eight times in World Cups; Australia had won six of these matches. A day before the final, Ponting had told the press that on crucial matches his team "tries to reach another level". The Indian fans' expectation on Tendulkar, the tournament's top-scorer, was quite high.</p>
+<h3 class="intro">List of players</h3>
+<h4 class="country">Australia</h4>
+<div id="australia">
+	<a>Mathew Hayden</a><br />
+	<a>Adam Gilchrist(wk)</a><br />
+	<a>Ricky Ponting(c)</a><br />
+	<a>Damien Martyn</a><br />
+	<a>Michael Bevan</a><br />
+	<a>Daren Lehman</a><br />
+	<a>Andrew Symonds</a><br />
+	<a>Brad Hogg</a><br />
+	<a>Andy Bichel</a><br />
+	<a>Brett Lee</a><br />
+	<a>Glenn Mgrath</a><br />
+</div>
+<h4 class="country">India</h4>
+<div id="india">
+	<a>Virender Sehwag</a><br />
+	<a>Sachin Tendulkar</a><br />
+	<a>Rahul Dravid(wk)</a><br />
+	<a>Saurav Ganguly(c)</a><br />
+	<a>Yuvaraj Singh</a><br />
+	<a>Mohammad Kaif</a><br />
+	<a>Dinesh Mongia</a><br />
+	<a>Harbhajan Singh</a><br />
+	<a>Zaheer Khan</a><br />
+	<a>Ashish Nehra</a><br />
+	<a>Javagal Srinath</a><br />
+</div>
+<p>Man of the match : Ricky Ponting</p>
+<p> Australia won the match by 125 runs, the largest margin of victory by runs in a World Cup final.</p>
+</body>
+</html>

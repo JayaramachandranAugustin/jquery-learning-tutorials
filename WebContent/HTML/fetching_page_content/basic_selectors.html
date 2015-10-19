@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Basic selectors</title>
+<script type="text/javascript" src="../../lib/jquery-1.11.3.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+$("document").ready(function(){
+	//Selects all the "a" tag
+	$("a").css("color","green");
+	//Selects paragraph tag with id first
+	$("p#first").css("color","red");
+	//Selects paragraph tag with class abc
+	$("p.abc").css("color","blue");
+});
+</script>
+</head>
+<body>
+<a href="#"> This is "a" tag</a>
+<p class="abc"> This is "p" tag with class "abc"</p>
+<p id="first"> This is "p" tag with id "first"</p>
+<article class="abc">This is "article"" tag</article>
+</body>
+</html>
