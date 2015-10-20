@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Advanced selectors</title>
+<script type="text/javascript" src="../../lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//filters only the p tag for which the immediate parent is div
+	$("div > p").css("color","green");
+	//filters the p which is descendant of div (any level)
+	//$("div  p").css("color","red");
+	
+	
+	//filters the div which follows after a tag
+	$("a + div").css("color","yellow");
+
+
+	$(".rock ~ p").css("color","blue");
+});
+</script>
+</head>
+<body>
+<div>
+<p>This p tag's immediate parent is div</p>
+<p>This p tag's immediate parent is div</p>
+<p>This p tag's immediate parent is div</p>
+<p>This p tag's immediate parent is div</p>
+<p>This p tag's immediate parent is div</p>
+</div>
+<a></a>
+<div>
+<article>
+<p>This p tag's immediate parent is article</p>
+<p>This p tag's immediate parent is article</p>
+<p>This p tag's immediate parent is article</p>
+<p>This p tag's immediate parent is article</p>
+<p>This p tag's immediate parent is article</p>
+</article>
+</div>
+
+<div>
+<p class="rock">This p tag's class is rock</p>
+<p>This p tag's immediate parent is div</p>
+<p>This p tag's immediate parent is div</p>
+<p>This p tag's immediate parent is div</p>
+<p>This p tag's immediate parent is div</p>
+</div>
+<a></a>
+<div>
+</body>
+</html>

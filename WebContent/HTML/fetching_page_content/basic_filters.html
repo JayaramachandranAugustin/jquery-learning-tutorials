@@ -23,6 +23,15 @@ $("document").ready(function(){
 	$("#india a:odd").css("color","blue");
 	//Filters the list of element whose indexes are even from the id india 
 	$("#india a:even").css("color","green");
+
+	//Filtering the elements when the index value is greater than 1
+	$("p:gt(1)").css("color","grey");
+	//Filtering the elements when the index value is equal to 1
+	$("p:eq(1)").css("color","brown");
+
+	//Filtering all the values except the last element
+	$("#australiaNotPlayed a:not(a:last)").css("color","brown");
+	
 	
 })
 </script>
@@ -39,6 +48,7 @@ $("document").ready(function(){
 <h3 class="intro">List of players</h3>
 <h4 class="country">Australia</h4>
 <div id="australia">
+<h6 class="country">Played in final</h6>
 	<a>Mathew Hayden</a><br />
 	<a>Adam Gilchrist(wk)</a><br />
 	<a>Ricky Ponting(c)</a><br />
@@ -51,20 +61,37 @@ $("document").ready(function(){
 	<a>Brett Lee</a><br />
 	<a>Glenn Mgrath</a><br />
 </div>
+<h6 class="country">Not Played in final</h6>
+	<div id="australiaNotPlayed">
+		<a>Nathan Bracken</a><br />
+		<a>Jason Gillespie</a><br />
+		<a>Ian Harvey</a><br />
+		<a>Nathan Hauritz</a><br />
+		<a>Jimmy Maher</a><br />
+		<a>Shane Warne</a><br />
+	</div>
 <h4 class="country">India</h4>
+<h6 class="country">Played in final</h6>
 <div id="india">
 	<a>Virender Sehwag</a><br />
 	<a>Sachin Tendulkar</a><br />
-	<a>Rahul Dravid(wk)</a><br />
+	<a>Rahul Dravid</a><br />
 	<a>Saurav Ganguly(c)</a><br />
 	<a>Yuvaraj Singh</a><br />
 	<a>Mohammad Kaif</a><br />
-	<a>Dinesh Mongia</a><br />
+	<a>Dinesh Mongia(wk)</a><br />
 	<a>Harbhajan Singh</a><br />
 	<a>Zaheer Khan</a><br />
 	<a>Ashish Nehra</a><br />
 	<a>Javagal Srinath</a><br />
 </div>
+<h6 class="country">Not Played in final</h6>
+	<div id="indiaNotPlayed">
+		<a>Parthiv Patel (wk)</a><br />
+		<a>Anil Kumble</a><br />
+		<a>Sanjay Bangar</a><br />
+		<a>Ajit Agarkar</a><br />
+	</div>
 <p>Man of the match : Ricky Ponting</p>
 <p> Australia won the match by 125 runs, the largest margin of victory by runs in a World Cup final.</p>
 </body>
