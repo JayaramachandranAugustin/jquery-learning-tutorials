@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JQuery statement chaining</title>
+<script type="text/javascript" src="../../lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$("document").ready(function(){
+	var borderSize=2;
+	var textSize=100;
+	$("#parentdiv p").each(function(index,element){
+		$(element).css("border",borderSize+"px solid green")
+				  .css("font-size",textSize+"%")
+				  .css("margin-left",borderSize+"cm");
+						  borderSize+=2;
+						  textSize+=20;
+		})
+	
+});
+</script>
+</head>
+<body>
+<div id="parentdiv">
+<p>first para</p>
+<p>second para</p>
+<p>third para</p>
+</div>
+</body>
+</html>
