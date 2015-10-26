@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Advanced Filters</title>
+<script type="text/javascript" src="../../lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//match all the p elements for which the class attribute is declared
+		$("p[class]").css("color","green");
+		
+		//match the paragraph elements for which the class is rock
+		$("p[class=rock]").css("color","red");
+		
+		//= equal to ^= starts with *= contains
+		//match the elements which tag is p and its id starts with "para"
+		$("p[id^=para]").css("border","3px solid green");
+		
+		//match the p elements for which the id starts with
+		$("p[id^=line][item*=free]").css("border","3px dot yellow");
+
+	});
+</script>
+</head>
+<body>
+<h3>Advanced filters</h3>
+<p class="rock">This paragraph tag belongs to class rock</p>
+<p class="scissor">This paragraph tag belongs to class scissor</p>
+<p>This paragraph tag does not have any class attribute</p>
+<p id="para1">This paragraph tag's id is para1</p>
+<p id="para2">This paragraph tag's id is para2</p>
+<p id="para3">This paragraph tag's id is para3</p>
+<p id="para4">This paragraph tag's id is para4</p>
+<p id="line1" item="1 free">This paragraph tag's id is line1 and item is 1 free</p>
+<p id="line2" item="1 discount">This paragraph tag's id is line and item is 2 free</p>
+</body>
+</html>

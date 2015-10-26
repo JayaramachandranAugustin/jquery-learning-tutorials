@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Attribute filters</title>
+<script type="text/javascript" src="../../lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//
+	$("p:contains(first)").css("border","2px solid green");
+	$("article:parent").css("border","2px solid blue");
+	$("div:has(p[class^=rock])").css("border","2px solid yellow");
+	$("div a:first-child").css("border","2px solid brown");
+	$("div a:last-of-type").css("border","2px solid grey");
+	$("article em:nth-child(3)").css("border","2px solid grey");
+	$("article em:nth-child(2n)").css("border","2px solid brown");
+	
+});
+</script>
+</head>
+<body>
+			<h3>Attribute filters</h3>
+	<article>
+		<p>first</p>
+		<p>second</p>
+		<p>third</p>
+	</article>
+	<div>
+		<p class="rock_star">Rockstar class</p>
+		<p>second</p>
+		<p>third</p>
+	</div>
+	<div>
+		<a>first a in div</a>
+		<a>second a in div</a>
+		<a>third a in div</a>
+	</div>
+	<article></article>
+	<article>
+		<em>1</em>
+		<em>2</em>
+		<em>3</em>
+		<em>4</em>
+		<em>5</em>
+		<em>6</em>
+	</article>
+</body>
+</html>

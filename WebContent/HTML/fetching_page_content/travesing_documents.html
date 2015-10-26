@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Traversing documents in </title>
+<script type="text/javascript" src="../../lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+
+$("document").ready(function(){
+	//$("#number_article").children().css("border","3px solid green");
+
+	var elem=$("#parasecond");
+	elem.next().css("border","3px solid blue");
+	elem.prev().css("border","3px solid yellow");
+	//elem.parent().css("border","3px solid red");
+	//elem.parents().css("border","3px solid red");
+	elem.parentsUntil($("body")).css("border","3px solid red");
+
+	$("#atagdiv").find($("#seconda")).css("border","3px solid grey");
+	var border=2;
+	var left_margin=2;
+	$("#number_article em").each(function(index,element){
+		$(element).css("border",border+"px solid grey")
+				  .css("left-margin",left_margin);
+		border++;
+		left_margin+=10;
+		});
+	
+});
+</script>
+</head>
+<body>
+			<h3>Attribute filters</h3>
+	<article>
+		<p id="parafirst">first</p>
+		<p id="parasecond">second</p>
+		<p id="parathird">third</p>
+	</article>
+	<div>
+		<p class="rock_star">Rockstar class</p>
+		<p>second</p>
+		<p>third</p>
+	</div>
+	<div id="atagdiv">
+		<a id ="firsta">first a in div</a>
+		<a id="seconda">second a in div</a>
+		<a id = "thirda">third a in div</a>
+	</div>
+	<article></article>
+	<article id="number_article">
+		<em>1</em>
+		<em>2</em>
+		<em>3</em>
+		<em>4</em>
+		<em>5</em>
+		<em>6</em>
+	</article>
+</body>
+</html>
