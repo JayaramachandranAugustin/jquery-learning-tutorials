@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Inserting page content</title>
+<script type="text/javascript" src="../../lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	$("document").ready(function(){
+		//$("#one p").append(". Some content appended at last");
+		//$("#one p").prepend("Some content appended at first. ");
+
+		//$("#one #sixthpara").appendTo("#one #seventhpara");
+		//$("#one #secondpara").prependTo("#one #firstpara");
+
+		//$("#one p").after("Some line inserted after");
+		//$("#one p").before("Some line inserted before");
+
+		//$("<p>New Line</p>").insertBefore("#one #sixthpara");
+		$("<p>New Line</p>").insertAfter("#one #firstpara");
+
+		})
+</script>
+</head>
+<body>
+<div id="one">
+	<p id="firstpara">This is first paragraph</p>
+	<p id="secondpara">This is second paragraph</p>
+	<p id="thirdpara">This is third paragraph</p>
+	<p id="fourthpara">This is fourth paragraph</p>
+	<p id="fifthpara">This is fifth paragraph</p>
+	<p id="sixthpara">This is sixth paragraph</p>
+	<p id="seventhpara">This is seventh paragraph</p>
+</div>
+</body>
+</html>

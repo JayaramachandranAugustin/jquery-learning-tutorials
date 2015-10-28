@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Creating content</title>
+<script type="text/javascript" src="../../lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	$("document").ready(function(){
+			//alert($("#one").html());
+			$("#create").on("click",onClick);
+			$("#change").on("click",onChange);
+			$("#changeall").on("click",onChangeAll);
+
+			function onClick(evt){
+				$("#firstpara").html("<p>First para changed</p>");
+			}
+
+			function onChange(evt){
+				$("#secondpara").text("Second para changed with text function");
+			}
+
+			function onChangeAll(evt){
+				$("#one p").text("All para changed");
+			}
+		});
+</script>
+</head>
+<body>
+<div id="one">
+	<p id="firstpara">This is first para</p>
+	<p id="secondpara">This is second para</p>
+	<p id="thirdpara">This is third para</p>
+	<p id="fourthpara">This is fourth para</p>
+	<p id="fifthpara">This is fifth para</p>
+	<p id="sixthpara">This is sixth para</p>
+</div>
+
+<input type="button" id="create" value="create">
+<input type="button" id="change" value="change"/>
+<input type="button" id="changeall" value="changeall"/>
+</body>
+</html>
